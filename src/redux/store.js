@@ -1,0 +1,31 @@
+import { configureStore, combineReducers } from '@reduxjs/toolkit';
+import { persistStore, persistReducer } from 'redux-persist';
+import storage from 'redux-persist/lib/storage';
+import { FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER } from 'redux-persist';
+import { advertsSlice } from './advert/advertsSlice';
+
+const rootReducer = combineReducers({
+  [advertsSlice.reducerPath]: persistReducer(
+    {
+      key: 'favoriteIds',
+      storage,
+      whitelist: ['favoriteIds'],
+    },
+    advertsSlice.reducer
+  ),
+});
+
+const store = configureStore({
+  reducer: rootReducer,
+  middleware: getDefaultMiddleware =>
+    getDefaultMiddleware({
+      serializableCheck: {
+        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+      },
+    }),
+  devTools: process.env.NODE_ENV === 'development',
+});
+
+const persistor = persistStore(store);
+
+export { store, persistor };

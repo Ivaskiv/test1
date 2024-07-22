@@ -1,0 +1,24 @@
+/* IconButton.css */
+
+@import '../../../../index.css';
+
+.icon_btn {
+  align-items: center;
+  padding: 12px 18px;
+  background: var(--color-light-grey);
+  border-radius: 100px;
+  border: none;
+  text-transform: capitalize;
+  font-size: 14px;
+}
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: none;
+
+  margin-right: 8px;
+}

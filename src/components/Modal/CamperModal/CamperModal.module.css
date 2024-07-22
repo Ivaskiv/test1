@@ -1,0 +1,289 @@
+/* CamperModal.css */
+
+@import '../../../../index.css';
+
+button {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  background-color: var(--color-background);
+  border-radius: 100px;
+  border: none;
+}
+
+.adverts_btn {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: var(--color-main);
+
+  margin-bottom: 44px;
+}
+
+.adverts_btn:hover,
+.adverts_btn:active {
+  color: var(--color-hover);
+}
+
+.icon_star,
+.icon_location {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: var(--color-icon-stroke);
+}
+
+.modal_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-modal-overlay);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.modal {
+  margin-top: 18px;
+  background: var(--color-white);
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 720px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.modal_close_btn {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 10px;
+  right: 10px;
+  border: none;
+  font-size: 24px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.modal_img {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.advert_title {
+  margin-bottom: 8px;
+}
+.icon_star {
+  width: 20px;
+  height: 20px;
+  fill: var(--color-icon-star);
+  stroke: var(--color-icon-star);
+  padding-right: 4px;
+}
+.advert_reviews_location {
+  display: flex;
+  flex-direction: row;
+  color: var(--color-main);
+  margin-bottom: 16px;
+}
+
+.advert_reviews {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  margin-right: 16px;
+}
+.advert_location {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.advert_image {
+  width: 100%;
+  height: 200px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.vehicle_details_line {
+  margin: 24px 0;
+}
+.vehicle_details {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+
+  color: var(--color-main);
+}
+.modal_scroll {
+  overflow-y: auto;
+  max-height: 406px;
+  margin-bottom: 44px;
+}
+
+.advert_description p {
+  color: var(--color-light-grey-text);
+  text-align: justify;
+  padding-right: 8px;
+}
+
+.container_left_right {
+  display: none;
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+
+.container_features_reviews_form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.container_reviewer {
+  margin-bottom: 24px;
+}
+
+.container_features_reviews {
+  display: flex;
+  width: 50%;
+  padding-bottom: 24px;
+}
+
+.features,
+.reviews {
+  background: none;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: var(--color-main);
+}
+
+.container_features_reviews {
+  display: flex;
+}
+
+.features,
+.reviews {
+  position: relative;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: var(--color-main);
+}
+
+.features.active::after,
+.reviews.active::after {
+  display: flex;
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -28px; /* розташування лінії під текстом */
+  width: 100%;
+  border: 4px solid var(--color-logo);
+  background-color: var(--color-logo);
+  border-radius: 2px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tabs_form_right {
+  display: flex;
+  box-sizing: border-box;
+  width: 50%;
+}
+
+.tabs_left {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.conttainer_avatarCircle_name_stars {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  gap: 16px;
+}
+
+.avatarCircle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  background: var(--color-light-grey);
+  border-radius: 60px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  color: var(--color-avatar-text);
+}
+
+.reviewer_name_stars {
+  display: flex;
+  flex-direction: row;
+}
+
+.container_avatar_stars {
+  display: flex;
+}
+
+.container_name_stars {
+  display: flex;
+  flex-direction: column;
+  margin: 8px 0;
+}
+
+.tabs_left {
+  display: flex;
+  flex-direction: column;
+}
+/* .price */
+.price {
+  background: transparent;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  color: var(--color-main);
+}
+
+.bottom_line,
+.vehicle_details_line {
+  margin: 0;
+  width: 100%;
+  margin-bottom: 24px;
+  border: none;
+  height: 0;
+  border: 1px solid var(--color-border-light);
+}

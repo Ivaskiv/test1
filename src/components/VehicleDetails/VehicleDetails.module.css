@@ -1,0 +1,14 @@
+@import '../../../index.css';
+
+.vehicle_details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: var(--color-main);
+}
+
+.detail_item {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 14px;
+}
