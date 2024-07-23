@@ -7,7 +7,6 @@ import { PersistGate } from 'redux-persist/integration/react';
 import { ToastContainer } from 'react-toastify';
 import { store, persistor } from '../../redux/store.js';
 import { fetchAdverts } from '../../redux/advert/advertOperation.js';
-// import Test from '../../pages/Test.jsx';
 
 const Home = lazy(() => import('../../pages/Home.jsx'));
 const Header = lazy(() => import('../../pages/Header.jsx'));
@@ -27,7 +26,6 @@ const App = () => {
           <Header />
           <Routes>
             <Route index path="/" element={<Home />} />
-            {/* <Route path="/test" element={<Test />} /> */}
             <Route path="/catalog" element={<Catalog />} />
             <Route path="/catalog/:advertId" element={<Catalog />} />
             <Route path="/favorites" element={<Favorites />} />
