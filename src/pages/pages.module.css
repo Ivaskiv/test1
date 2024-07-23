@@ -1,16 +1,15 @@
 @import '../../index.css';
 
-/* Common styles */
-.catalog_page {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  box-sizing: border-box;
-  min-height: 100vh;
-  margin-bottom: 80px;
-  padding: 20px;
-  background-color: var(--color-white);
-  color: var(--color-main);
+.logo {
+  font-size: 42px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  margin-bottom: 5px;
+}
+
+.logo span,
+p span {
+  color: var(--color-logo);
 }
 
 /* Header */
@@ -26,22 +25,6 @@
   z-index: 1000;
 }
 
-.logo {
-  font-size: 42px;
-  font-weight: bold;
-  letter-spacing: 5px;
-  margin-bottom: 5px;
-}
-
-.logo span,
-p span {
-  color: var(--color-logo);
-}
-
-.subtitle {
-  font-size: 10px;
-}
-
 .nav_menu {
   margin-left: auto;
 }
@@ -55,6 +38,23 @@ p span {
 
 .nav_menu a:hover {
   color: var(--color-logo);
+}
+
+.subtitle {
+  font-size: 10px;
+}
+
+/* Common styles */
+.catalog_page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box;
+  min-height: 100vh;
+  margin-bottom: 80px;
+  padding: 20px;
+  background-color: var(--color-white);
+  color: var(--color-main);
 }
 
 /* Home page */
