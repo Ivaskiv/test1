@@ -33,6 +33,11 @@ package-lock.json
 tmp/**
 !tmp/.gitkeep
 
+
+
+
 public/**
 !public/avatars
 !public/avatars/.gitkeep
+
+Test.jsx
